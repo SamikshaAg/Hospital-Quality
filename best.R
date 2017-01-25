@@ -9,7 +9,10 @@ best <- function(state, outcome)
     x <- 23
   else
     stop("Invalid outcome")
+  ## To split through States
   newSet <- split(dataSet,dataSet$State, drop=TRUE)
+  
+  # To select required state only
   newSet1 <- newSet[[state]]
  if(is.null(nrow(newSet1)))
    stop("Invalid state")
